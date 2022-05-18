@@ -1,0 +1,36 @@
+from time import sleep
+print('Seja bem vindo ao simulatormilhas !!!')
+sleep(1)
+print('Que bom que você esta interessado em nos vender suas milhas')
+sleep(1)
+gol = '1'
+latam = '2'
+todoazul = '3'
+companhia = str(input('Qual companhia você deseja vender suas milhas? 1 (Gol), 2 (Latam) , 3 (TodoAzul)? '))
+if companhia == '1':
+    print('Bem vindo a Gol')
+elif companhia == '2':
+    print('Bem vindo a Latam')
+elif companhia == '3':
+    print('Bem vindo a TodoAzul')
+else:
+    print('Opção invalida')
+    exit()
+quantvendas = int(input('Qual a quantidade de milhas que você quer vender? '))
+if quantvendas >1000 and quantvendas <= 40000 and companhia == '1':
+    print('o Valor do seu milheiro sairá a 17,50 e o valor total a receber será de R$ {:.2f}'.format(quantvendas/1000*17.50))
+elif quantvendas >40000 and quantvendas <= 100000 and companhia == '1':
+    print('o Valor do seu milheiro sairá a 20.05 e o valor total a receber será de R$ {:.2f}'.format(quantvendas / 1000*20.05))
+elif quantvendas >1000 and quantvendas <= 40000 and companhia == '2':
+    print('o Valor do seu milheiro sairá a 22,00 e o valor total a receber será de R$ {:.2f}'.format(quantvendas / 1000*22))
+elif quantvendas >40000 and quantvendas <= 100000 and companhia == '2':
+    print('o Valor do seu milheiro sairá a 24,00 e o valor total a receber será de R$ {:.2f}'.format(quantvendas / 1000*24))
+elif quantvendas >1000 and quantvendas <= 40000 and companhia == '3':
+    print('o Valor do seu milheiro sairá a 23,00 e o valor total a receber será de R$ {:.2f}'.format(quantvendas / 1000*23))
+elif quantvendas >40000 and quantvendas <= 100000 and companhia == '3':
+    print('o Valor do seu milheiro sairá a 25,00 e o valor total a receber será de R$ {:.2f}'.format(quantvendas / 1000*25))
+elif quantvendas >100000:
+    print('Estamos comprando até 100.000 milhas, favor retorne outro momento')
+    exit()
+else:
+    print('Opção invalida, processo encerrado.')
