@@ -1,0 +1,56 @@
+<HTML>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Praticando meu Html e CSS</title>
+    </head>
+    
+    <body>
+<h1>Votação de Companhias Aereas</h1>
+<p>O que tiver com <span class="obrigatorio">*</span> é obrigado a preencher</p>
+<form action="/pagina-processa-dados-do-formulario" method="post">
+    <div>
+        <label for="name"><b>Nome</b><span class="obrigatorio">*</span></label>
+        <input type="text" id="name" placeholder="Nome completo">
+        <p></p>
+    </div>
+    <div>
+        <label for="email"><b>E-mail</b><span class="obrigatorio">*</span></label>
+        <input type="email" id="email" placeholder="Email completo">
+        <p></p>
+    </div>
+    <div>
+        <label for="opcoes"><b>Companhia</b></label>
+        <select name="opcoes" id="opcoes">
+        <option value="Vazio" select>
+        <option value="Lat">Latam</option>
+        <option value="Gol">Gol</option>
+        <option value="Azul">Todo Azul</option>
+        <option value="Tap">Tap</option>
+        </select>
+    </div>
+    <div>
+        <p></p>
+        <label for="msg"><b>Justifique sua resposta</b><span class="obrigatorio">*</span></label>
+        <textarea id="msg"></textarea>
+        <p><b>Digite no máximo 100 caracteres</b></p>
+    </div>
+    <div class="button">
+        <button type="submit"><b>Enviar sua votação</b></button>
+    </div>
+    </form>
+ </body>
+</HTML>
+
+CSS
+
+.obrigatorio {
+    color: red;
+}
+div button{
+    color: darkblue;
+}
+::selection{
+    background-color: aqua;
+    color: violet;
